@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class dataIn
+ * Servlet implementation class dataOut
  */
-@WebServlet("/dataIn")
-public class dataIn extends HttpServlet {
+@WebServlet("/dataOut")
+public class dataOut extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public dataIn() {
+    public dataOut() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,10 +28,8 @@ public class dataIn extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		 response.setContentType("text/html;charset=UTF-8");
-		String str = "안녕하세요.";
-		String str2 = request.getParameter("abc");
+		String str = request.getParameter("text123");
 		System.out.println(str);
-		response.getWriter().write(str + str2);
 	}
 
 	/**

@@ -12,6 +12,9 @@ $(document).ready(function() {
 $.ajax({
 	type:'post',
 	url:'dataIn',
+	data: {
+		"abc" : "abcdef"
+	},
 	success: function(result) {
 		$('.greed').text(result);
 	},
@@ -28,5 +31,8 @@ $.ajax({
 <button type="submit">Logout</button>
 </form>
 </div>
+<form action="dataOut" method="post">
+<input type="text" name="text123" value="에레레레레렐" />
+</form>
 </body>
 </html>
