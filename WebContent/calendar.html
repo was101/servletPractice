@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calendar</title>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link href="fullCalendar/core/main.css" rel="stylesheet" />
+<link href="fullCalendar/timegrid/main.css" rel="stylesheet" />
+<link href="fullCalendar/bootstrap/main.css" rel="stylesheet" />
+<script src="fullCalendar/core/main.js"></script>
+<script src="fullCalendar/timegrid/main.js"></script>
+<script src="fullCalendar/bootstrap/main.js"></script>
+<script>
+$(document).ready(function() {
+	$('#calendar').fullCalendar({
+		plugins:['timegrid', 'bootstrap'],
+		timeZone:'UTC',
+		header:{
+			left:' prev home next',
+			center: 'title',
+			right:''
+		},
+		selectable:true,
+		events: []
+	});
+});
+</script>
+</head>
+<body>
+<div id="calendar"></div>
+</body>
+</html>
